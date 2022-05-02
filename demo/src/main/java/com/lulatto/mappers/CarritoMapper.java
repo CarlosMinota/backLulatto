@@ -12,7 +12,7 @@ import com.lulatto.dto.CarritoDTO;
 public interface CarritoMapper {
 
 	@Mapping(source = "compra", target = "compra.idCompra")
-	public Carrito carritoDTOToCarrito(CarritoDTO carritoDTO);
+	public Carrito carritoDTOToCarrito(CarritoDTO carritoDTO); 
 	
 	@Mapping(source = "compra.idCompra", target = "compra")
 	public CarritoDTO carritoToCarritoDTO(Carrito carrito);
