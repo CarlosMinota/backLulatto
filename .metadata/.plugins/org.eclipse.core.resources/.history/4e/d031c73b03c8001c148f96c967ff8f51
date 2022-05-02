@@ -1,0 +1,14 @@
+package com.lulatto;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class EnvioTest {
+
+	
+	@Test
+	public void prueba() {
+		
+	}
+}

@@ -1,0 +1,10 @@
+package com.lulatto.services;
+
+import java.sql.SQLException;
+
+import com.lulatto.dto.CompraDTO;
+
+public interface CompraService {
+
+	public CompraDTO addCompra(CompraDTO compraDTO) throws SQLException;
+}

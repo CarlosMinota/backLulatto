@@ -1,0 +1,9 @@
+package com.lulatto.services;
+
+import com.lulatto.domain.Carrito;
+import com.lulatto.dto.CarritoDTO;
+
+public interface CarritoSevice {
+ 
+	public Carrito crearCarrito(CarritoDTO carritoDTO);
+}

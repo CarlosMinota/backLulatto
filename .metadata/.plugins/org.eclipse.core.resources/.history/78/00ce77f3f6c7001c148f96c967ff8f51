@@ -1,0 +1,34 @@
+package com.lulatto.services;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Service;
+
+import com.lulatto.domain.Carrito;
+import com.lulatto.domain.Compra;
+import com.lulatto.dto.CarritoDTO;
+import com.lulatto.dto.ClienteDTO;
+import com.lulatto.repository.CompraRepository;
+
+@Scope("singleton")
+@Service
+public class CarritoServiceImpl implements CarritoSevice{
+	
+	private CompraRepository compraRepository;
+
+	@Override
+	public CarritoDTO crearCarrito(CarritoDTO carritoDTO) {
+		
+		Carrito carrito = new Carrito();
+		Compra compra = null;
+		
+		carrito.setCantidad(carritoDTO.getCantidad());
+		carrito.setPrecio(carritoDTO.getPrecio());
+		
+		compra = compraRepository.findByIdCompra(carritoDTO.getCompra());
+		
+		carrito.setCompra(compra);
+		
+		return carritoDTO;
+	}
+
+}

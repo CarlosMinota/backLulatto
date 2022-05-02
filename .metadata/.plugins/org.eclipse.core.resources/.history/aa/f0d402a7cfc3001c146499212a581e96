@@ -1,0 +1,49 @@
+package com.lulatto.dto;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import com.lulatto.domain.Ciudad;
+import com.lulatto.domain.Compra;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class ClienteDTO implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private Long idCliente;
+	
+	private Long cedula;
+	
+	private String nombreCliente;
+	
+	private String telefono;
+	
+	private String direccion;
+	
+	private String correoElectronico;
+	
+	private Ciudad ciudad;
+	
+	private List<Compra> listaCompra = new ArrayList<>();
+
+}

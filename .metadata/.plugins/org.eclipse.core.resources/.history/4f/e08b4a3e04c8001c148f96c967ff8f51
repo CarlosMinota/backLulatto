@@ -1,0 +1,23 @@
+package com.lulatto.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.lulatto.domain.Envio;
+import com.lulatto.repository.EnvioRespository;
+
+
+public class EnvioServiceImpl implements EnvioService{
+
+	@Autowired
+	private EnvioRespository envioRepository;
+
+	@Override
+	public Envio findByIdEnvio(Long idEnvio) {
+		
+		Envio envio = envioRepository.findByIdEnvio(idEnvio);
+		
+		return envio;
+	}
+	
+	
+}

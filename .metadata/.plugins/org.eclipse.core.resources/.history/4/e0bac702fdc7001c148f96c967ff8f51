@@ -1,0 +1,24 @@
+package com.lulatto.services;
+
+import java.sql.SQLException;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Service;
+
+import com.lulatto.domain.Compra;
+import com.lulatto.dto.CompraDTO;
+
+@Service
+@Scope("singleton")
+public class CompraServiceImpl implements CompraService{
+
+	@Override
+	public CompraDTO addCompra(CompraDTO compraDTO) throws SQLException {
+		
+		Compra compra = new Compra();
+		
+		
+		return compraDTO;
+	}
+
+}

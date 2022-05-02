@@ -1,0 +1,14 @@
+package com.lulatto.mappers;
+
+import org.mapstruct.Mapper;
+
+import com.lulatto.domain.Compra;
+import com.lulatto.dto.CompraDTO;
+
+@Mapper(componentModel = "spring")
+public interface CompraMapper {
+
+	public Compra compraDTOToCompra (CompraDTO compraDTO);
+	
+	public CompraDTO compraToCompraDTO (Compra compra);
+}
