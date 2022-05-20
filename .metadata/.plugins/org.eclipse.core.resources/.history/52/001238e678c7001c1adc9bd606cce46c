@@ -1,5 +1,0 @@
-package com.lulatto.mappers;
-
-public interface CarritoMapper {
-
-}

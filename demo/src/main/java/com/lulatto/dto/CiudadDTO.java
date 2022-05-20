@@ -6,8 +6,15 @@ import java.io.Serializable;
 
 import com.lulatto.domain.Departamentos;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class CiudadDTO implements Serializable{
 
 	/**
@@ -19,42 +26,8 @@ public class CiudadDTO implements Serializable{
 	
 	private String nombreCiudad;
 	
-	private Departamentos departamentos;
+	private Long departamentos;
 	
-	public CiudadDTO() {
-		super();
-	}
-
-	public CiudadDTO(Long idCiudad, String nombreCiudad, Departamentos departamentos) {
-		super();
-		this.idCiudad = idCiudad;
-		this.nombreCiudad = nombreCiudad;
-		this.departamentos = departamentos;
-	}
-
-	public Long getIdCiudad() {
-		return idCiudad;
-	}
-
-	public void setIdCiudad(Long idCiudad) {
-		this.idCiudad = idCiudad;
-	}
-
-	public String getNombreCiudad() {
-		return nombreCiudad;
-	}
-
-	public void setNombreCiudad(String nombreCiudad) {
-		this.nombreCiudad = nombreCiudad;
-	}
-
-	public Departamentos getDepartamentos() {
-		return departamentos;
-	}
-
-	public void setDepartamentos(Departamentos departamentos) {
-		this.departamentos = departamentos;
-	}
-
+	
 	
 }

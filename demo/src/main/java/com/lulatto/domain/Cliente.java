@@ -37,7 +37,7 @@ public class Cliente implements Serializable{
 	private Long idCliente;
 	
 	@Column(name = "cedula")
-	private Long cedula;
+	private String cedula;
 	
 	@Column(name = "nombre_cliente")
 	private String nombreCliente;

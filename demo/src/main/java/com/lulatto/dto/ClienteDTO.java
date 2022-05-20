@@ -18,7 +18,7 @@ public class ClienteDTO implements Serializable{
 	
 	private Long idCliente;
 	
-	private Long cedula;
+	private String cedula;
 	
 	private String nombreCliente;
 	
