@@ -13,4 +13,6 @@ public interface ClienteService {
 	public ClienteDTO crearCliente(ClienteDTO clienteDTO) throws SQLException;
 	
 	public Cliente findByIdCliente(Long idCliente) throws SQLException;
+	
+	public Cliente login(String correoElectronico, String password) throws SQLException;
 }

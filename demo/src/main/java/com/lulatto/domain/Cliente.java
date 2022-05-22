@@ -15,6 +15,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -51,9 +53,13 @@ public class Cliente implements Serializable{
 	@Column(name = "correo_electronico")
 	private String correoElectronico;
 	
+	@JsonIgnore
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "ciudad_id_ciudad")
 	private Ciudad ciudad;
+	
+	@Column(name = "password")
+	private String password;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente")
 	private List<Compra> listaCompra = new ArrayList<>();

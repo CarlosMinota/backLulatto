@@ -28,6 +28,8 @@ public class ClienteDTO implements Serializable{
 	
 	private String correoElectronico;
 	
+	private String password;
+	
 	private Long ciudad;
 
 }
